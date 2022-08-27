@@ -9,7 +9,7 @@ class ZegoException extends Exception
 {
     public function __construct($code)
     {
-        parent::__construct(get_message($code), $code);
+        parent::__construct($this->get_message($code), $code);
     }
 
     private function get_message($code): string

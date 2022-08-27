@@ -1,0 +1,28 @@
+{
+    "name": "sysrandom/laravel-zego",
+    "description": "Laravel wrapper for Zego IM Server Assistant",
+    "keywords": ["laravel","Zego","Zego IM"],
+    "type": "library",
+    "authors": [
+        {
+            "name": "Jason Soh",
+            "email": "jason@xs-tech.sg"
+        }
+    ],
+    "require": {
+        "php": ">=5.6",
+        "illuminate/support": ">=5.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sysrandom\\Zego\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Sysrandom\\Zego\\Provider\\ZegoServiceProvider"
+            ]
+        }
+    }
+}

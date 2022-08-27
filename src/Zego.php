@@ -34,10 +34,13 @@ class Zego
         switch ($keyLen) {
             case 16:
                 $cipher = 'aes-128-cbc';
+                break;
             case 24:
                 $cipher = 'aes-192-cbc';
+                break;
             case 32:
                 $cipher = 'aes-256-cbc';
+                break;
             default:
                 throw new ZegoException(ZegoErrorCodes::secretInvalid);
         }

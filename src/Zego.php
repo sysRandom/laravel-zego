@@ -17,9 +17,9 @@ class Zego
      */
     public function generate_token(string $user_id, array $payload = []): string
     {
-        $appId = config('zego.app_id');
+        $appId = (int) config('zego.app_id');
         $appSecret = config('zego.app_secret');
-        $expiry = config('zego.token_expiry');
+        $expiry = (int) config('zego.token_expiry');
         if ($appId == 0) {
             throw new ZegoException(ZegoErrorCodes::appIDInvalid);
         }
